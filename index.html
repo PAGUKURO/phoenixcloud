@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Meiryo;
+            text-align: center;
+        }
+        h1 {
+            position: relative;
+             background: #dfefff;
+             margin: 1em 1em;
+            box-shadow: 0px 0px 0px 5px #dfefff;
+            border: dashed 2px white;
+            padding: 0.2em 0.5em;
+            font-size: 35px;
+            color: #454545;
+        }
+
+        h1:after {
+            position: absolute;
+            content: '';
+            left: -7px;
+            top: -7px;
+            border-width: 0 0 15px 15px;
+            border-style: solid;
+            border-color: #fff #fff #a8d4ff;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+        }
+
+.cp_ipcheck {
+	width: 95%;
+	margin: 2em;
+	text-align: Center;
+    font-size: x-large;
+}
+@keyframes click-wave {
+	0% {
+		position: relative;
+		width: 30px;
+		height: 30px;
+		opacity: 0.35;
+	}
+	100% {
+		width: 200px;
+		height: 200px;
+		margin-top: -80px;
+		margin-left: -80px;
+		opacity: 0;
+	}
+}
+.cp_ipcheck .option-input02 {
+	position: relative;
+	top: 13.33333px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	margin-right: 0.5rem;
+	cursor: pointer;
+	transition: all 0.15s ease-out 0s;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	background: #d7cbcb;
+	-webkit-appearance: none;
+	        appearance: none;
+}
+.cp_ipcheck .option-input02:hover {
+	background: #d6a9a9;
+}
+.cp_ipcheck .option-input02:checked {
+	background: #da3c41;
+}
+.cp_ipcheck .option-input02:checked::before {
+	font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '';
+	text-align: center;
+}
+.cp_ipcheck .option-input02:checked::after {
+	position: relative;
+	display: block;
+	content: '';
+	-webkit-animation: click-wave 0.65s;
+	        animation: click-wave 0.65s;
+	background: #da3c41;
+}
+.cp_ipcheck .option-input02.radio {
+	border-radius: 50%;
+}
+.cp_ipcheck .option-input02.radio::after {
+	border-radius: 50%;
+}
+.cp_ipcheck label {
+	line-height: 40px;
+	display: block;
+}
+.cp_ipcheck .option-input02:disabled {
+	cursor: not-allowed;
+	background: #b8b7b7;
+}
+.cp_ipcheck .option-input02:disabled::before {
+	font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✖';
+	text-align: center;
+}
+
+.inputname{
+    font-size: x-large;
+    font-family: Meiryo;
+    font-weight: 100;
+    font-style: inherit;
+}
+textarea {
+  resize: vertical;
+  width:400px;
+  height:60px;
+}
+.Nomal{
+    font-size: x-large;
+    font-family: Meiryo;
+    font-weight: 80;
+    font-style: inherit;
+    vertical-align: middle;
+    display: inline-block;
+}
+    </style>
+</head>
+<body>    
+    <h1>お名前シール自動プリントサービス</h1>
+    <form name="form">
+        <h2>◆Step1：名前を入力してください</h2>
+        <input class="inputname" type="text" name="myname"  placeholder="例：ふじ　たろう" />
+        <div><hr>
+        <h2>◆Step2：お好きなデザインを選択してください</h2>
+        <div class="cp_ipcheck">
+            <label>
+            <input  type="checkbox" class="option-input02 checkbox" name="d1">🐧ぺんぎん・・・・・・・・
+            <img src="/pix/d1.png" width="300ox">
+            </label>
+            <label>
+            <input type="checkbox" class="option-input02 checkbox" name="d2">さわがに・・・・・・・・
+            <img src="/pix/d2.png" width="300ox">　
+            </label>
+            <label>
+            <input type="checkbox" class="option-input02 checkbox" name="d3">ロボット・・・・・・・・
+            <img src="/pix/d3.png" width="300ox">
+            </label>
+            <label>
+            <input type="checkbox" class="option-input02 checkbox" name="d4">いちご・・・・・・・・
+            <img src="/pix/d4.png" width="300ox">　
+            </label>
+    </div>
+        <hr>
+        <div>
+            <h2>◆Step3：プリント開始</h2>
+            <p class="Nomal">出力先を選択してください⇒</p>
+            <select  class="inputname" id="device" >
+                 <option value="東京（中野坂上）">東京（中野坂上）</option>
+                 <option value="横浜ショールーム">横浜ショールーム</option>
+                 <option value="大阪ショールーム">大阪ショールーム</option>
+                 <option value="福岡ショールーム">福岡ショールーム</option>
+                 <option value="札幌ショールーム">札幌ショールーム</option>
+                 <option value="沖縄ショールーム">沖縄ショールーム</option>
+            </select><br>
+            <P class="Nomal">🐧🐧🐧🐧🐧🐧　メモ欄　🐧🐧🐧🐧🐧🐧</P><br>
+            <textarea  name="memo"></textarea>
+        </div><br>
+        <input  class="inputname" type="button" id="exe_botan" name="setname" value="プリント実行">
+
+        <h2>--------------------【出力プレビュー】--------------------</h3>
+        <div id="planview"><h3>⇒プリントイメージが表示されます</h3></div>
+
+    </form>
+<br>
+</div>
+<hr>
+<br>
+<p>//Command option//</p>
+        <button id="download" type="button">FreeFlowへ送る</button>
+    </form>
+
+    <script src="seallabelform.js"></script>
+    <script src="csvd.js"></script>   
+
+</body>
+</html>
